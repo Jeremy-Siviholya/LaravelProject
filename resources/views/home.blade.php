@@ -36,18 +36,22 @@
 
     }
     .nav ul li:hover{
-        color: rgb(63, 85, 88);
+        
+        transform: translateX(3px);
+
+    }
+
+    .nav ul li a:hover{
+        color: rgb(74, 211, 230);
         text-decoration: none;
         font-weight: bold;
-        transform: translateX(10px);
         transition-duration: .3s;
-
     }
     ul{
         display: flex;
         justify-content: end;
         align-items: center;
-        gap: 10px;
+        gap: 30px;
     }
     .h1{
         margin-top: 20px;
