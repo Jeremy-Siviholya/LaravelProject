@@ -7,21 +7,19 @@
     <title>Home</title>
 </head>
 <style>
+    body{
+        background-color: black;
+        font-family: sans-serif;
+    }
+
     *{
         padding: 0;
         margin: 0;
         box-sizing: border-box
     }
-    .wrap{
-        background: rgb(32, 27, 27);
-        padding: 30px;
-        font-family: sans-serif;
-        width: 100vw;
-        height: 100vh;
-    }
 
     .nav{
-        background: white;
+        background:white;
         padding: 20px;
 
 
@@ -42,7 +40,7 @@
     }
 
     .nav ul li a:hover{
-        color: rgb(74, 211, 230);
+        color: blue;
         text-decoration: none;
         font-weight: bold;
         transition-duration: .3s;
@@ -53,21 +51,20 @@
         align-items: center;
         gap: 30px;
     }
-    .h1{
-        margin-top: 20px;
-        color: white
+    body{
+        background-color: black;
+        font-family: sans-serif;
     }
+    h1{
+        color: white;
+        margin-top: 20px;
+        text-transform: uppercase;
+    }
+
 </style>
 <body>
-    <div class="wrap">
-        <div class="nav">
-            <ul>
-                <li><a href="/">HOME</a></li>
-                <li><a href="./login">LOGIN</a></li>
-                <li><a href="./services">SERVICES</a></li>
-                <li><a href="./about">ABOUT</a></li>
-            </ul>
-        </div>
+    <div>
+        @include('Layout.navbar')
         <h1 class="h1">Home</h1>
     </div>
 </body>
