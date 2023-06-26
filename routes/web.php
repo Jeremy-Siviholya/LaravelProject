@@ -18,4 +18,6 @@ Route::get('about',[HomeController::class, 'about']);
 Route::get('contact',[HomeController::class, 'contact']);
 Route::get('services',[HomeController::class, 'services']);
 Route::get('login',[HomeController::class, 'login']);
+Route::post('loginpost',[HomeController::class, 'loginpost']);
+Route::get('data',[HomeController::class, 'test']);
 

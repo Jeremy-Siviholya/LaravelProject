@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -20,5 +21,21 @@ class HomeController extends Controller
     }
     public function contact(){
         return view('contact');
+    }
+
+    public function test()
+    {
+
+    }
+
+    public function loginpost(Request $request)
+    {
+        $user =new User();
+        $user->name=$request->name;
+        $user->telephone=$request->telephone;
+        $user->password=$request->password;
+        $user->save();
+        return 'successfully';
+        //dd($request->all());
     }
 }
