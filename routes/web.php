@@ -19,5 +19,7 @@ Route::get('contact',[HomeController::class, 'contact']);
 Route::get('services',[HomeController::class, 'services']);
 Route::get('login',[HomeController::class, 'login']);
 Route::post('loginpost',[HomeController::class, 'loginpost']);
+Route::get('destroyUser/{id}',[HomeController::class, 'destroyUser']);
+Route::get('user',[HomeController::class, 'getUser']);
 Route::get('data',[HomeController::class, 'test']);
 

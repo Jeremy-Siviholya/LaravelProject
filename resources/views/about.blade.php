@@ -11,5 +11,6 @@
 <body class="bg-dark">
     @include('Layout.navbar')
     <h1 class="btn btn-info ms-4 mt-4">ABOUT</h1>
+   <p class="btn btn-info">{{$users[0]->name}}</p> 
 </body>
 </html>

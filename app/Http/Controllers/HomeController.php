@@ -30,12 +30,25 @@ class HomeController extends Controller
 
     public function loginpost(Request $request)
     {
-        $user =new User();
-        $user->name=$request->name;
-        $user->telephone=$request->telephone;
-        $user->password=$request->password;
-        $user->save();
-        return 'successfully';
-        //dd($request->all());
+        User::create($request->all());  
+       
     }
+
+    public function getUser()
+    {
+       $users = User::all();
+       return view('about',['users'=>$users]);
+        //return response()->json(['data'=>$user]);
+    }
+
+    public function updateUser(Request $query, $id)
+    {
+        User::find($id->update($query->all()));
+    }
+
+    public function destroyUser($id)
+    {
+        User::find($id)->delete();
+    }
+
 }
